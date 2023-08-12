@@ -1,10 +1,9 @@
 name: Publish to Maven Central
 run-name: Release run ${{ github.run_number }} # Enumerates entries in the "workflow runs" view
-#on:
-#  release:
-#    types: [created]
 on:
-  workflow_dispatch: # Only run when manually started
+  workflow_dispatch:
+  release:
+    types: [ created ]
 jobs:
   release: # Arbitrarily chosen
     name: Release # Arbitrarily chosen
@@ -19,21 +18,10 @@ jobs:
           java-package: 'jdk'
           java-version: '11'
           # check-latest: true
-          # server-id: '39A73E6D' # must match the serverId configured for the nexus-staging-maven-plugin
-          # server-username: OSSRH_USERNAME # Env var that holds your OSSRH user name
-          # server-password: OSSRH_PASSWORD # Env var that holds your OSSRH user pw
-          # gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }} # Substituted with the value stored in the referenced secret
-          # gpg-passphrase: SIGN_KEY_PASS # Env var that holds the key's passphrase
-          # cache: 'maven'
+          cache: 'maven'
       - name: Publish
         run: ./gradlew publishAllPublicationsToSonatypeRepository
         env:
-          #          SIGNING_KEY_ID: '39A73E6D'
-          #          SIGNING_PASSWORD: ${{ secrets.SIGN_KEY_PASS }}
-          #          SIGNING_SECRET_KEY_RING_FILE: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-          #          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          #          OSSRH_PASSWORD: ${{ secrets.OSSRH_USERNAME }}
-          #          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
           SIGN_KEY_ID: ${{ secrets.SIGN_KEY_ID }}
           SIGN_PASSWORD: ${{ secrets.SIGN_PASSWORD }}
           SIGN_SECRET_KEY: ${{ secrets.SIGN_SECRET_KEY }}
