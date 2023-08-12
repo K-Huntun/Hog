@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Hog"
 include(":androidApp")
-include(":log")
+include(":hog")
+includeBuild("convention-plugins")

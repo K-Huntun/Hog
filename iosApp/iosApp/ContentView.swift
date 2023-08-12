@@ -1,5 +1,5 @@
 import SwiftUI
-import log
+import hog
 
 struct ContentView: View {
 

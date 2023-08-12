@@ -2,6 +2,7 @@ package com.heiha.huntun.hog
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.fail
 
 class IosHogTest {
 

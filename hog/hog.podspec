@@ -1,24 +1,24 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'log'
+    spec.name                     = 'hog'
     spec.version                  = '1.0'
     spec.homepage                 = 'Link to the Shared Module homepage'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Some description for the Shared Module'
-    spec.vendored_frameworks      = 'build/cocoapods/framework/log.framework'
+    spec.vendored_frameworks      = 'build/cocoapods/framework/hog.framework'
     spec.libraries                = 'c++'
     spec.ios.deployment_target = '14.1'
                 
                 
     spec.pod_target_xcconfig = {
-        'KOTLIN_PROJECT_PATH' => ':log',
-        'PRODUCT_MODULE_NAME' => 'log',
+        'KOTLIN_PROJECT_PATH' => ':hog',
+        'PRODUCT_MODULE_NAME' => 'hog',
     }
                 
     spec.script_phases = [
         {
-            :name => 'Build log',
+            :name => 'Build hog',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT

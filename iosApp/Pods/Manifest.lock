@@ -1,16 +1,16 @@
 PODS:
-  - log (1.0)
+  - hog (1.0)
 
 DEPENDENCIES:
-  - log (from `../log`)
+  - hog (from `../hog`)
 
 EXTERNAL SOURCES:
-  log:
-    :path: "../log"
+  hog:
+    :path: "../hog"
 
 SPEC CHECKSUMS:
-  log: 65dfff756d747fe13997675547be6dc64d3f311e
+  hog: a1802b9506d7e5b807cdcca99bc5fccc55d37f48
 
-PODFILE CHECKSUM: 7f7a1f16a468aa44726bb3512ac8ba92523f6aea
+PODFILE CHECKSUM: 29ff4a21afbc6cae873a2e6fb967138be8236339
 
 COCOAPODS: 1.12.1

@@ -176,10 +176,10 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/../../log/build/cocoapods/framework/log.framework"
+  install_framework "${PODS_ROOT}/../../hog/build/cocoapods/framework/hog.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/../../log/build/cocoapods/framework/log.framework"
+  install_framework "${PODS_ROOT}/../../hog/build/cocoapods/framework/hog.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

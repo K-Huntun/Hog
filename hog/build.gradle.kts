@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.cocoapods)
     alias(libs.plugins.android.library)
+    id("convention.publication")
 }
 
 java {
@@ -15,6 +16,8 @@ kotlin {
                 jvmTarget = "11"
             }
         }
+
+        publishLibraryVariants("release", "debug")
     }
     ios()
     iosArm64()
@@ -27,7 +30,7 @@ kotlin {
         ios.deploymentTarget = "14.1"
         podfile = project.file("../iosApp/Podfile")
         framework {
-            baseName = "log"
+            baseName = "hog"
         }
     }
     
@@ -93,3 +96,6 @@ android {
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 }
+
+group = "top.heiha.huntun"
+version = "1.0.0"
