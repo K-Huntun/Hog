@@ -1,0 +1,55 @@
+[versions]
+agp = "7.4.2"
+kotlinAndroid = "1.8.10"
+kotlinPluginSerialization = "1.8.10"
+kotlinMultiplatform = "1.8.10"
+kotlinPlugin = "1.8.10"
+sqldelight = "2.0.0-rc02"
+ksp = "1.8.22-1.0.11"
+kotlinCocopods = "1.8.0"
+jetbrainsCompose = "1.5.0-beta01"
+composeCompiler = "1.4.4"
+mockVersion = "1.13.5"
+
+[libraries]
+androidx-test-core = "androidx.test:core-ktx:1.5.0"
+androidx-test-espresso = "androidx.test.espresso:espresso-core:3.5.1"
+androidx-test-junit = "androidx.test.ext:junit-ktx:1.1.5"
+androidx-test-rules = "androidx.test:rules:1.5.0"
+androidx-test-runner = "androidx.test:runner:1.5.2"
+androidx-test-uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
+junit = "junit:junit:4.13.2"
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
+robolectric = "org.robolectric:robolectric:4.10.3"
+mockk-android = { module = "io.mockk:mockk-android", version.ref="mockVersion" }
+mockk-agent = { module = "io.mockk:mockk-agent", version.ref="mockVersion" }
+
+
+[plugins]
+android-application = { id="com.android.application", version.ref="agp"}
+android-library = { id="com.android.library", version.ref="agp"}
+kotlin-android = { id="org.jetbrains.kotlin.android", version.ref="kotlinAndroid"}
+kotlin-plugin-serialization = { id="org.jetbrains.kotlin.plugin.serialization", version.ref="kotlinPluginSerialization"}
+kotlin-multiplatform = { id="org.jetbrains.kotlin.multiplatform", version.ref="kotlinMultiplatform"}
+sqldelight = { id="app.cash.sqldelight", version.ref="sqldelight"}
+ksp = { id="com.google.devtools.ksp", version.ref="ksp" }
+kotlin-cocoapods = { id="org.jetbrains.kotlin.native.cocoapods", version.ref="kotlinCocopods" }
+jetbrains-compose = { id="org.jetbrains.compose", version.ref="jetbrainsCompose" }
+mockmp = { id="org.kodein.mock.mockmp", version="1.13.0"}
+
+[bundles]
+test-jvm = [
+    "androidx-test-core",
+    "androidx-test-junit",
+    "androidx-test-rules",
+    "androidx-test-runner",
+    "kotlin-test-junit",
+    "robolectric",
+    "mockk-android",
+    "mockk-agent"
+]
+test-ios = [
+    "kotlin-test"
+]
+
