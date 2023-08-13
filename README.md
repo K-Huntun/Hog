@@ -1,5 +1,7 @@
 # Hog
 
+[![Publish to Maven Central](https://github.com/K-Huntun/Hog/actions/workflows/publish.yml/badge.svg?event=release)](https://github.com/K-Huntun/Hog/actions/workflows/publish.yml)
+
 Hog is a logging library for Kotlin Multiplatform Mobile (KMM) , designed to provide a simple logging solution for your applications. It supports Android, iOS platforms, allowing you to have consistent logging functionality across multiple platforms.
 
 ## Features
