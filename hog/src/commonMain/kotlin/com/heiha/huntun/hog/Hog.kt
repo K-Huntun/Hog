@@ -1,6 +1,6 @@
 package com.heiha.huntun.hog
 
-internal var logDelegate: ((level: LogLevel, tag: String, msg: String, tr: Throwable?) -> Unit) = ::log
+var logDelegate: ((level: LogLevel, tag: String, msg: String, tr: Throwable?) -> Unit) = ::log
 
 enum class LogLevel(val priority: Int, val simpleName: String) {
     VERBOSE(2, "V"),

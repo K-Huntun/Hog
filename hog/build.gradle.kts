@@ -98,4 +98,5 @@ android {
 }
 
 group = "top.heiha.huntun"
-version = "1.0.1"
+version = "1.0.2"
+description = "changelog: export logDelegate"
